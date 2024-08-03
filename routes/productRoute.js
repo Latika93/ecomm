@@ -12,8 +12,8 @@ import {
     searchProductController,
     realtedProductController,
     productCategoryController,
-    brainTreeTokenController,
-    brainTreePaymentController
+    // brainTreeTokenController,
+    // brainTreePaymentController
 } from "../controllers/productController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 import formidable from "express-formidable";
@@ -70,10 +70,10 @@ router.get("/product-category/:slug", productCategoryController);
 
 //payment method
 //token
-router.get("/braintree/:token", brainTreeTokenController);
+// router.get("/braintree/:token", brainTreeTokenController);
 
-//payments
-router.post("/braintree/payment",requireSignIn, brainTreePaymentController);
+// //payments
+// router.post("/braintree/payment",requireSignIn, brainTreePaymentController);
 
 
 
